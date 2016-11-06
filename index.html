@@ -94,11 +94,11 @@
                 </a>
 
                 <ul class="right hide-on-med-and-down">
-                  <li  ng-controller="SearchHomeController as sc" class="white card search-box-home" >
-                    <form data-ng-submit="sc.submitForm(sc.form)">
-                      <input id="searchIconBtn" placeholder="Digite seu CEP" class="col s8 tt-green-text" data-ng-model="sc.form.cep"  />
-                        <button class="col s3 right orange-text btn-search-box-home" style="margin-top: -5px;"><i class="material-icons dp48">search</i></button>
-                      </form>
+                    <li ng-controller="SearchHomeController as sc" class="white card search-box-home">
+                        <form data-ng-submit="sc.submitForm(sc.form)">
+                            <input id="searchIconBtn" placeholder="Digite seu CEP" class="col s8 tt-green-text" data-ng-model="sc.form.cep" />
+                            <button class="col s3 right orange-text btn-search-box-home" style="margin-top: -5px;"><i class="material-icons dp48">search</i></button>
+                        </form>
                     </li>
 
                     <li data-ng-repeat="link in Home.links" ng-show="Home.setLoggedMenu(link.type)"><a href="{{link.href}}">{{link.title}}</a></li>
@@ -182,6 +182,33 @@
         $(document).ready(function() {
             new WOW().init();
 
+        /*    var asyncLoop = function(o) {
+                var i = -1,
+                    length = o.length;
+
+                var loop = function() {
+                    i++;
+                    if (i == length) {
+                        o.callback();
+                        return;
+                    }
+                    o.functionToLoop(loop, i);
+                }
+                loop(); //init
+            }
+
+            asyncLoop({
+                length: 1000,
+                functionToLoop: function(loop, i) {
+                  setTimeout(function() {
+                      $('.carousel').carousel('next');
+                      loop();
+                  }, 2000);
+                },
+                callback: function() {
+                    //document.write('All done!');
+                }
+            });*/
         });
     </script>
     <script src="assets/js/materialize.min.js"></script>

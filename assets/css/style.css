@@ -361,6 +361,12 @@ textarea {
     color: #26a69a !important;
 }
 
+.tt-white-border-round {
+  border-radius: 32px;
+  border: 2px solid white;
+  padding: 10px 20px
+}
+
 .tt-new-blue-bg {
     background-color: #2F4C8D !important;
 }
