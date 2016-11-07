@@ -19,6 +19,7 @@ function HomeController($location, helperService, $cookies, $window,$http) {
     vm.partners = helperService.partnerOptions;
     vm.contactModal = contactModal;
     vm.submitContactForm = submitContactForm;
+    $('.carousel').carousel();
 
     vm.submitForm = submitForm;
 

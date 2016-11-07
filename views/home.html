@@ -1,4 +1,4 @@
-<div class="section no-pad-bot" id="home-banner">
+<div class="section no-padding" id="home-banner">
     <div class="row tt-blue-text tt-margin-top tt-main-background z-depth-1 tt-principal">
 
         <div class="hide-on-large-only">
@@ -11,14 +11,14 @@
             <br>
         </div>
 
-        <div class="col s12 offset-l2 l4 tt-pacientes-box z-depth-5 tt-search-home tt-new-blue-bg ">
+        <div class="col s12 offset-l2 l4 tt-pacientes-box z-depth-5 tt-search-home tt-new-green-bg ">
             <h4 class="header center ">Pacientes e Familiares</h4>
             <p class="col s12 center ">
                 Encontre cuidadores, enfermeiras e fisioterapeutas para cuidar de quem você ama.
             </p>
 
             <div class="col s12 center">
-                <form name="Home.homeForm" data-ng-submit="Home.submitForm(Home.form)">
+                <form name="Home.homeForm" data-ng-submit="Home.submitForm(Home.form)" class="card" style="padding-top: 13px;padding-bottom: 13px;">
                     <div class="col s12 center">
                         <input class="center white black-text" data-ng-model="Home.form.cep" required type="text" name="cep" mask="99999-999" placeholder="Digite seu CEP aqui" />
                     </div>
@@ -35,13 +35,14 @@
                    Pesquise aqui
                 </button>
                     </div>
+                    <div class="clearfix"></div>
                 </form>
             </div>
 
         </div>
 
         <div class="row">
-            <div class="map-current-test col s12  no-padding" >
+            <div class="map-current-test col s12  no-padding">
                 <div class="col s12 m4 offset-m2">
                     <h6 class="center white-text tt-new-orange-bg bubble-text bubble-border" style="font-size:12px;">IMPORTANTE: Começamos os testes na região oeste de SP – Capital</h6>
                 </div>
@@ -52,11 +53,11 @@
 
         <div class="row" id="titi">
             <div class="white col s12">
-                <h5 class="center tt-new-brown-text tt-w-i-tt">O que é TITI?</h5>
+                <h5 class="center  tt-green-text tt-w-i-tt">O que é TITI?</h5>
             </div>
-            <div class="section tt-new-brown-bg no-margin panel-double-padding row col s12">
+            <div class="section tt-image-green  no-margin panel-double-padding row col s12">
 
-                <div class="col s12 m4 offset-m2 white-text" style="text-align:center;">
+                <div class="col s12 m4 offset-m2 white-text">
 
                     <p>TITI é uma startup que empodera Profissionais apaixonados por cuidar de quem a gente ama para que você possa encontrá-los.
                     </p>
@@ -85,67 +86,87 @@
                     <br>
                     <h5 class="center white-text valign col s12">Mapa do Cuidador</h5><br>
                     <div class="col s12 valign">
-                        <img src="assets/images/round-img-map.png" width="250px" class="center valign" />
+                        <img src="assets/images/maps-icon.png" width="250px" class="center valign" />
                     </div>
 
                 </div>
 
             </div>
             <div class="row">
-              <div class=" no-pad-bot tt-footer-background tt-margin-top tt-new-brown-text white  no-padding row no-margin">
+                <div class=" no-pad-bot tt-footer-background tt-margin-top tt-green-text white  no-padding row no-margin">
 
-                <div class="row">
-                    <div class="col s12 l12">
-                        <br class="hide-on-med-and-down">
+                    <div class="row">
+                        <div class="col s12 l12">
+                            <br class="hide-on-med-and-down">
 
-                    </div>
+                        </div>
 
-                    <div class="col s12 m8 offset-m2  ">
-                        <br class="hide-on-med-and-up">
+                        <div class="col s12 m8 offset-m2  ">
+                            <br class="hide-on-med-and-up">
 
-                        <div class="col s12 center" style="margin-bottom:20px;">
-                            <h5 class="col s10 offset-s1 m4 offset-m4 center bubble-text   center m-auto wow pulse animated" data-wow-duration="2s" data-wow-iteration="infinite">
+                            <div class="col s12 center" style="margin-bottom:20px;">
+                                <h5 class="col s10 offset-s1 m4 offset-m4 center bubble-text   center m-auto wow pulse animated" data-wow-duration="2s" data-wow-iteration="infinite">
           Como Funciona ??
         </h5>
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <div class="col s12 m4 center ">
+                                <img class="responsive-img" src="assets/images/map-icon-2.png" width="170px" />
+                                <p>
+                                    1. Informe seu CEP e o tipo de Cuidador
+                                </p>
+                            </div>
+                            <div class="col s12 m4 center ">
+                                <img class="responsive-img" src="assets/images/phone.png" width="170px" />
+                                <p>
+                                    2. Fale com os Cuidadores e contrate o perfil mais adequado
+                                </p>
+                            </div>
+                            <div class="col s12 m4 center ">
+                                <img class="responsive-img circle" src="assets/images/rating.png" width="170px" />
+                                <p>
+                                    3. Avalie o profissional
+                                </p>
+                            </div>
+
+
+
                         </div>
-
-                        <br>
-                        <br>
-
-                        <div class="col s12 m4 center ">
-                            <img class="responsive-img circle" src="assets/images/round-img-map.png" width="170px" />
-                            <h5>
-                      1. Informe seu
-CEP e o tipo
-de Cuidador
-                    </h5>
-                        </div>
-                        <div class="col s12 m4 center ">
-                            <img class="responsive-img circle" src="assets/images/step3-round.jpg" width="170px" />
-                            <h5>
-                      2. Fale com os
-Cuidadores e
-contrate o perfil
-mais adequado
-                    </h5>
-                        </div>
-                        <div class="col s12 m4 center ">
-                            <img class="responsive-img circle" src="assets/images/step4-round.jpg" width="170px" />
-                            <h5>
-                      3. Avalie o
-profissional
-                    </h5>
-                        </div>
-
-
-
                     </div>
-                </div>
 
+                </div>
             </div>
-          </div>
+            <div class="row" id="titi">
+                <div class="col s12 m2 offset-m5">
+                    <h5 class="center white-text  tt-white-border-round">Parceiros</h5>
+                </div>
+                <div class="section tt-image-green  no-margin panel-double-padding row col s12">
+
+                    <div class="col s12 m4 offset-m2 white-text">
+
+                      <p>O Senior Social é um clube de vantagens para quem tem mais de 55 anos.</p>
+<p>Se cadastre em <a href="http://www.seniorsocial.com.br" class="yellow-text">http://www.seniorsocial.com.br</a> e receba conteúdo consitente, promoções exclusivas, tenha oportunidade de reciclar seus conhecimentos e aumente seus contatos com os eventos e viagens promovidos por eles.
+</p>
+</div>
+                    <div class="col s12 m4 center card">
+                        <div class="col s12">
+                          <img src="assets/images/seniorsocial-logo.jpg" />
+                          <!--  <div class="carousel">
+                                <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/1"></a>
+                                <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/2"></a>
+                                <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/nature/3"></a>
+                                <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
+                                <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+                            </div>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="clearfix">
-</div>
+    <div class="clearfix">
+    </div>
