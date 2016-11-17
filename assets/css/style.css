@@ -111,6 +111,12 @@ footer {
     display: none !important;
 }
 
+.brand-name {
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 19px !important;
+}
+
 .font-titi-1 {
     font-family: 'Kaushan Script', cursive;
 }
@@ -469,6 +475,18 @@ body select {
     text-shadow: 1px 3px 4px gray;
 }
 
+.p-all-ss {
+  padding:5px !important;
+}
+
+.p-all-s {
+  padding:20px !important;
+}
+
+.p-all-m {
+  padding:40px !important;
+}
+
 .wrap-all {
     word-wrap: break-word;
 }
@@ -584,7 +602,7 @@ body select {
         font-size: 12px !important;
     }
     h4.tt-lo {
-        margin-top: 23px !important;
+        margin-top: 23px ;
     }
     #logo-container {
         width: 68%;
@@ -615,5 +633,10 @@ body select {
     }
     nav {
         height: 71px;
+    }
+    .brand-name {
+      margin-left: 10px;
+      margin-top: 11px !important;
+      font-size: 19px !important;
     }
 }
