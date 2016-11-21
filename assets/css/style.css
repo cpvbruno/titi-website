@@ -94,7 +94,7 @@ nav ul a:hover {
 }
 
 footer {
-    height: 250px;
+    min-height: 250px;
     background-color: #2b2b2b;
     padding: 40px;
 }
