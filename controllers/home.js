@@ -18,6 +18,7 @@ function HomeController($location, helperService, $cookies, $window,$http) {
     vm.setLoggedMenu = setLoggedMenu;
     vm.partners = helperService.partnerOptions;
     vm.contactModal = contactModal;
+    vm.contactMore = contactMore;
     vm.submitContactForm = submitContactForm;
     $('.carousel').carousel();
 
@@ -29,6 +30,9 @@ function HomeController($location, helperService, $cookies, $window,$http) {
     }
     function contactModal() {
       angular.element("#modalContact").openModal();
+    }
+    function contactMore() {
+      angular.element("#modalMore").openModal();
     }
     function submitContactForm(form) {
       var data = angular.copy(form);

@@ -112,9 +112,9 @@ footer {
 }
 
 .brand-name {
-  margin-left: 10px;
-  margin-top: 15px;
-  font-size: 19px !important;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 22px !important;
 }
 
 .font-titi-1 {
@@ -553,7 +553,14 @@ body select {
 }
 .main-search-box {
   width: 500px;
-margin-left: 115px;
+/*margin-left: 115px;*/
+}
+.partner-card .card {
+    min-height: 287px;
+}
+.partner-card .card .valign-wrapper
+{
+  min-height: 227px;
 }
 
 @media screen and (max-width:840px) {

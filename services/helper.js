@@ -156,21 +156,29 @@ function helperService() {
     },
     {
       id: '2',
-      name: 'Enfermeiro'
+      name: 'Enfermeiro Cuidador'
     },
     {
       id: '3',
       name: 'Cuidador'
     },
+		{
+			id: '7',
+			name: 'Assessor Familiar Cuidador'
+		},
+		{
+			id: '8',
+			name: 'Acompanhante Cuidador'
+		},
     {
       id: '4',
-      name: 'Fisioterapeuta'
+      name: 'Fisioterapeuta Cuidador'
     },
 		{
 			id: '6',
 			name: 'Educador Físico'
 		},
-    {
+		{
       id: '0',
       name: 'Todos'
     }
