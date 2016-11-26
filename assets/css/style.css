@@ -94,7 +94,7 @@ nav ul a:hover {
 }
 
 footer {
-    height: 250px;
+    min-height: 250px;
     background-color: #2b2b2b;
     padding: 40px;
 }
@@ -109,6 +109,12 @@ footer {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
+}
+
+.brand-name {
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 22px !important;
 }
 
 .font-titi-1 {
@@ -137,6 +143,7 @@ footer {
 
 .tt-nav-bar {
     background-color: #1C2743;
+    box-shadow:none;
 }
 
 .tt-blue-background {
@@ -468,6 +475,18 @@ body select {
     text-shadow: 1px 3px 4px gray;
 }
 
+.p-all-ss {
+  padding:5px !important;
+}
+
+.p-all-s {
+  padding:20px !important;
+}
+
+.p-all-m {
+  padding:40px !important;
+}
+
 .wrap-all {
     word-wrap: break-word;
 }
@@ -532,6 +551,17 @@ body select {
     padding: 0px;
     border-radius: 0px;
 }
+.main-search-box {
+  width: 500px;
+/*margin-left: 115px;*/
+}
+.partner-card .card {
+    min-height: 287px;
+}
+.partner-card .card .valign-wrapper
+{
+  min-height: 227px;
+}
 
 @media screen and (max-width:840px) {
     a#logo-container img {
@@ -583,7 +613,7 @@ body select {
         font-size: 12px !important;
     }
     h4.tt-lo {
-        margin-top: 23px !important;
+        margin-top: 23px ;
     }
     #logo-container {
         width: 68%;
@@ -601,7 +631,7 @@ body select {
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:769px) {
     a#logo-container img {
         height: 46px;
         width: auto;
@@ -614,5 +644,15 @@ body select {
     }
     nav {
         height: 71px;
+    }
+    .brand-name {
+      margin-left: 10px;
+      margin-top: 11px !important;
+      font-size: 19px !important;
+    }
+
+    .main-search-box {
+      width: 100%;
+      margin-left: 0px;
     }
 }
