@@ -11,10 +11,6 @@
 
             <div class="row margin">
 
-
-
-
-
                 <div id="step1" ng-show="Customer.step == 1 || Customer.step == 5">
                     <div class="col s12 offset-l2 l8">
                         <h5 class="tt-title-bottom">Informações pessoais</h5>
@@ -93,7 +89,7 @@
                             <!-- Validation messages -->
                             <div class="tt-error-text" data-ng-show="Customer.signupForm.cpf_cnpj.$invalid && Customer.signupForm.cpf_cnpj.$touched" data-ng-messages="Customer.signupForm.cpf_cnpj.$error">
                                 <p data-ng-message="required">Campo obrigatório</p>
-                                <p data-ng-message="cpf_cnpj">CPF inválido</p>
+                                <p ng-show="Customer.signupForm.cpf_cnpj.$invalid" >CPF inválido</p>
                             </div>
                         </div>
 
