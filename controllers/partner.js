@@ -210,9 +210,14 @@ function PartnerSignupController($http, $window, $location, helperService) {
             .then(function(res) {
                 console.log('succeess', res);
                 vm.loading = false;
-                $window.alert('Usuário cadastrado com sucesso. Faça login para continuar.');
+                $window.alert(res.data[0].mensagem);
                 // Redirect to login
-                $location.path('/users/login/partners');
+                if (res.data[0].status == "ERRO") {
+
+                } else {
+                    $location.path('/users/login/partners');
+                }
+
             }, function(err) {
                 console.log('error', err);
                 vm.errorMessage = err.statusText || 'Ocorreu um erro. Tente novamente.';
@@ -289,9 +294,13 @@ function PartnerManageController($http, $window, $location, $cookies, helperServ
             .then(function(res) {
                 console.log('succeess', res);
                 vm.loading = false;
-                $window.alert('Dados alterados com sucesso.');
+                $window.alert(res.data[0].mensagem);
                 // Redirect to login
-                $location.path('/users/login/partners');
+                if (res.data[0].status == "ERRO") {
+
+                } else {
+                    $location.path('/users/login/partners');
+                }
             }, function(err) {
                 console.log('error', err);
                 vm.errorMessage = err.statusText || 'Ocorreu um erro. Tente novamente.';

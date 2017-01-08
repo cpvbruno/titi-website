@@ -91,7 +91,7 @@
                         <!-- Validation messages -->
                         <div class="tt-error-text" data-ng-show="Partner.submitManageForm.cpf_cnpj.$invalid && Partner.submitManageForm.cpf_cnpj.$touched" data-ng-messages="Partner.submitManageForm.cpf_cnpj.$error">
                             <p data-ng-message="required">Campo obrigatório</p>
-                            <p data-ng-message="cpf_cnpj">CPF inválido</p>
+                            <p ng-show="Partner.submitManageForm.cpf_cnpj.$invalid">CPF inválido</p>
                         </div>
                     </div>
 
@@ -112,12 +112,23 @@
                     <h5 class="tt-title-bottom">Informações residenciais</h5>
 
                     <br>
+                    <div class="form-group" data-ng-class="{ 'card-panel' : Partner.submitManageForm.cep.$invalid
+                  && Partner.submitManageForm.cep.$touched }">
 
+                        <label>CEP</label>
+                        <input class="form-control validate" via-cep="cep" data-ng-model="Partner.data.cep" mask="99999-999" data-ng-pattern="Partner.regexCEP" type="text" placeholder="99999-999" required name="cep"></input>
+
+                        <!-- Validation messages -->
+                        <div class="tt-error-text" data-ng-show="Partner.submitManageForm.cep.$invalid && Partner.submitManageForm.cep.$touched" data-ng-messages="Partner.submitManageForm.cep.$error">
+                            <p data-ng-message="required">Campo obrigatório</p>
+                            <p data-ng-message="pattern">CEP inválido</p>
+                        </div>
+                    </div>
                     <div class="form-group" data-ng-class="{ 'card-panel' : Partner.submitManageForm.endereco.$invalid
 							&& Partner.submitManageForm.endereco.$touched }">
 
                         <label>Endereço completo</label>
-                        <input class="form-control validate" data-ng-model="Partner.data.endereco" type="text" name="endereco" placeholder="Endereço completo" required></input>
+                        <input class="form-control validate" via-cep="logradouro" data-ng-model="Partner.data.endereco" type="text" name="endereco" placeholder="Endereço completo" required></input>
 
                         <!-- Validation messages -->
                         <div class="tt-error-text" data-ng-show="Partner.submitManageForm.endereco.$invalid && Partner.submitManageForm.endereco.$touched" data-ng-messages="Partner.submitManageForm.endereco.$error">
@@ -130,7 +141,7 @@
 
                         <label>Bairro</label>
 
-                        <input class="form-control validate" data-ng-model="Partner.data.bairro" type="text" placeholder="Bairro" required name="bairro"></input>
+                        <input class="form-control validate" via-cep="bairro"  data-ng-model="Partner.data.bairro" type="text" placeholder="Bairro" required name="bairro"></input>
 
                         <!-- Validation messages -->
                         <div class="tt-error-text" data-ng-show="Partner.submitManageForm.bairro.$invalid && Partner.submitManageForm.bairro.$touched" data-ng-messages="Partner.submitManageForm.bairro.$error">
@@ -138,24 +149,13 @@
                         </div>
                     </div>
 
-                    <div class="form-group" data-ng-class="{ 'card-panel' : Partner.submitManageForm.cep.$invalid
-							&& Partner.submitManageForm.cep.$touched }">
 
-                        <label>CEP</label>
-                        <input class="form-control validate" data-ng-model="Partner.data.cep" mask="99999-999" data-ng-pattern="Partner.regexCEP" type="text" placeholder="99999-999" required name="cep"></input>
-
-                        <!-- Validation messages -->
-                        <div class="tt-error-text" data-ng-show="Partner.submitManageForm.cep.$invalid && Partner.submitManageForm.cep.$touched" data-ng-messages="Partner.submitManageForm.cep.$error">
-                            <p data-ng-message="required">Campo obrigatório</p>
-                            <p data-ng-message="pattern">CEP inválido</p>
-                        </div>
-                    </div>
 
                     <div class="form-group" data-ng-class="{ 'card-panel' : Partner.submitManageForm.cidade.$invalid
 							&& Partner.submitManageForm.cidade.$touched }">
 
                         <label>Cidade</label>
-                        <input class="form-control validate" data-ng-model="Partner.data.cidade" type="text" placeholder="Cidade" required name="cidade"></input>
+                        <input class="form-control validate" via-cep="localidade" data-ng-model="Partner.data.cidade" type="text" placeholder="Cidade" required name="cidade"></input>
 
                         <!-- Validation messages -->
                         <div class="tt-error-text" data-ng-show="Partner.submitManageForm.cidade.$invalid && Partner.submitManageForm.cidade.$touched" data-ng-messages="Partner.submitManageForm.cidade.$error">
@@ -167,11 +167,8 @@
 							&& Partner.submitManageForm.estado.$touched }">
 
                         <label>Estado</label>
-                        <select class="form-control tt-no-border" data-ng-model="Partner.data.estado" required name="estado">
-							<option value="">Selecione...</option>
-							<option data-ng-repeat="estado in Partner.estadoOptions"
-								value="{{estado.sigla}}">{{estado.name}}</option>
-            </select>
+
+            <input class="form-control validate" disabled via-cep="uf" data-ng-model="Partner.data.estado" type="text" placeholder="Estado" required name="estado"></input>
 
                         <!-- Validation messages -->
                         <div class="tt-error-text" data-ng-show="Partner.submitManageForm.estado.$invalid && Partner.submitManageForm.estado.$touched" data-ng-messages="Partner.submitManageForm.city.$error">
