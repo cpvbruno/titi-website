@@ -63,7 +63,7 @@ function CustomerController($cookies, $http, $window, $location, authService, cu
         $location.path(termsLink);
     }
     vm.username = cookies.currentUser.username;
-    url = helperService.backendUrl + '/cadastro/usuario.php';
+    url = helperService.backendUrl + '/cadastro/paciente.php';
     data = {
         "usuariosID": cookies.currentUser.usuariosID
     };
@@ -274,7 +274,7 @@ function CustomerSignupController($scope, $http, $window, $location, helperServi
 
 function CustomerManageController($scope, $http, $window, $location, helperService, $cookies) {
     var vm = this;
-    url = helperService.backendUrl + '/cadastro/usuario.php';
+    url = helperService.backendUrl + '/cadastro/paciente.php';
     globals = $cookies.getObject('globals');
     data = {
         "usuariosID": globals.currentUser.usuariosID
