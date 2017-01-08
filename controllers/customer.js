@@ -457,7 +457,7 @@ function CustomerRateController($http, $window, $location, $cookies, helperServi
         data.myclass = currentRate;
         data.pacientesID = globals.currentUser.pacientesID;
         data.especialistasID = especialistasID;
-        url = helperService.backendUrl + "/cadastro/paciente_update.php";
+        url = helperService.backendUrl + "/cadastro/usuario_update.php";
         $http.post(url, data)
             .then(function(res) {
                 console.log('succeess', res);
