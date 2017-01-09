@@ -88,7 +88,7 @@
                         <!-- Validation messages -->
                         <div class="tt-error-text" data-ng-show="Partner.signupForm.cpf_cnpj.$invalid && Partner.signupForm.cpf_cnpj.$touched" data-ng-messages="Partner.signupForm.cpf_cnpj.$error">
                             <p data-ng-message="required">Campo obrigatório</p>
-                            <p data-ng-message="cpf_cnpj">CPF inválido</p>
+                            <p ng-show="Partner.signupForm.cpf_cnpj.$invalid">CPF inválido</p>
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@
 							&& Partner.signupForm.estado.$touched }">
 
                         <label>Estado</label>
-            
+
             <input class="form-control validate" disabled via-cep="uf" data-ng-model="Partner.data.estado" type="text" placeholder="Estado" required name="estado"></input>
 
                         <!-- Validation messages -->
