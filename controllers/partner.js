@@ -204,7 +204,12 @@ function PartnerSignupController($http, $window, $location, helperService) {
         data.profilePicture = data.profilePicture.base64;
 
         var url = helperService.backendUrl + '/cadastro/usuario_update.php';
-
+        cpfCheck = new helperService.cpfCheck();
+        if (cpfCheck.valida(data.cpf_cnpj) == "CPF Inválido") {
+            $window.alert("CPF Inválido");
+            vm.loading = false;
+            return;
+        }
         vm.loading = true;
         $http.post(url, data)
             .then(function(res) {
@@ -288,7 +293,12 @@ function PartnerManageController($http, $window, $location, $cookies, helperServ
           data.profilePicture = data.profilePicture.base64;
         }
         var url = helperService.backendUrl + '/cadastro/usuario_update.php';
-
+        cpfCheck = new helperService.cpfCheck();
+        if (cpfCheck.valida(data.cpf_cnpj) == "CPF Inválido") {
+            $window.alert("CPF Inválido");
+            vm.loading = false;
+            return;
+        }
         vm.loading = true;
         $http.post(url, data)
             .then(function(res) {

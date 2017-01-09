@@ -236,8 +236,6 @@ function CustomerSignupController($scope, $http, $window, $location, helperServi
         var url = helperService.backendUrl + '/cadastro/paciente_update.php';
         vm.loading = true;
 
-        
-
         cpfCheck = new helperService.cpfCheck();
         if (cpfCheck.valida(data.cpf_cnpj) == "CPF Inválido") {
             $window.alert("CPF Inválido");
@@ -310,7 +308,12 @@ function CustomerManageController($scope, $http, $window, $location, helperServi
         globals = $cookies.getObject('globals');
         data.usuariosID = globals.currentUser.usuariosID;
         var url = helperService.backendUrl + '/cadastro/paciente_update.php';
-
+        cpfCheck = new helperService.cpfCheck();
+        if (cpfCheck.valida(data.cpf_cnpj) == "CPF Inválido") {
+            $window.alert("CPF Inválido");
+            vm.loading = false;
+            return;
+        }
         vm.loading = true;
         $http.post(url, data)
             .then(function(res) {
