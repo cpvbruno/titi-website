@@ -264,12 +264,12 @@ function helperService() {
   helper.linkOptions = [
 	  {
       href: '#/users/login/partners',
-      title: 'Profissionais',
+      title: 'Área do Cuidador',
 			type: 2
     },
     {
       href: '#/users/login/customers',
-      title: 'Clientes',
+      title: 'Área do Paciente',
 			type: 3
     },
     {
