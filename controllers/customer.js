@@ -477,8 +477,6 @@ function CustomerRateController($http, $window, $location, $cookies, helperServi
                 $window.alert('Classificação Enviada');
                 // Redirect to login
                 closeModal(especialistasID, 1);
-                ga('create', 'UA-84850577-1', 'auto', 'customerrate');
-                ga('customerrate.send', 'pageview');
             }, function(err) {
                 console.log('error', err);
                 vm.errorMessage = err.statusText || 'Ocorreu um erro. Tente novamente.';
