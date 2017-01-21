@@ -8,7 +8,7 @@ ga('buscacompleta.send', 'pageview');
         <div class="row">
             <div class="input-field col s12 m12  ">
 
-                <a class="waves-effect waves-light btn modal-trigger right" ng-click="Search.openSearch()">Nova Busca</a>
+                <a class="waves-effect waves-light btn modal-trigger right" ng-click="Search.openSearch()" analytics-on="click" analytics-event="Clique-Botao-Abrir-Nova-Busca">Nova Busca</a>
                 <!--<a class="btn waves-effect waves-light tt-blue-background right" style="margin-right:10px;">Clique aqui para Pesquisas anteriores</a>-->
                 <h4 >Buscar Profissional</h4>
                 <hr>
@@ -50,7 +50,7 @@ ga('buscacompleta.send', 'pageview');
 
                                             <div class="col s12 center">
                                                 <button class="btn waves-effect waves-light col s12 tt-margin-top-button
-                  tt-blue-background" type="submit" name="action">
+                  tt-blue-background" type="submit" name="action" analytics-on="click" analytics-event="Clique-Botao-Efetuando-Nova-Busca">
                                   Pesquise aqui
                               </button>
                                             </div>
