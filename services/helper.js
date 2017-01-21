@@ -2,9 +2,9 @@
 
 angular
 	.module('titi')
-  .factory('helperService', [helperService]);
+  .factory('helperService', ['baseService', helperService]);
 
-function helperService() {
+function helperService(baseService) {
   var helper = {};
 	helper.cpfCheck = cpfCheck;
 
@@ -14,7 +14,7 @@ function helperService() {
     year: /^[0-9]{4}/
   };
 
-  helper.backendUrl = 'http://titicuidadores.com.br/_homolog';
+  helper.backendUrl = baseService.backendUrl;
 
 	function cpfCheck() {
 			"user_strict";
