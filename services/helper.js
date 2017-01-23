@@ -2,9 +2,9 @@
 
 angular
 	.module('titi')
-  .factory('helperService', [helperService]);
+  .factory('helperService', ['baseService', helperService]);
 
-function helperService() {
+function helperService(baseService) {
   var helper = {};
 	helper.cpfCheck = cpfCheck;
 
@@ -14,7 +14,7 @@ function helperService() {
     year: /^[0-9]{4}/
   };
 
-  helper.backendUrl = 'http://titicuidadores.com.br/_prd';
+  helper.backendUrl = baseService.backendUrl;
 
 	function cpfCheck() {
 			"user_strict";
@@ -264,12 +264,12 @@ function helperService() {
   helper.linkOptions = [
 	  {
       href: '#/users/login/partners',
-      title: 'Profissionais',
+      title: 'Área do Cuidador',
 			type: 2
     },
     {
       href: '#/users/login/customers',
-      title: 'Clientes',
+      title: 'Área do Paciente',
 			type: 3
     },
     {

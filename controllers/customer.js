@@ -477,7 +477,6 @@ function CustomerRateController($http, $window, $location, $cookies, helperServi
                 $window.alert('Classificação Enviada');
                 // Redirect to login
                 closeModal(especialistasID, 1);
-
             }, function(err) {
                 console.log('error', err);
                 vm.errorMessage = err.statusText || 'Ocorreu um erro. Tente novamente.';

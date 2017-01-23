@@ -53,8 +53,9 @@
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-84850577-1', 'auto');
-        ga('send', 'pageview');
+        /*ga('create', 'UA-84850577-1', 'none');*/
+        ga('create', 'UA-84850577-1');
+        /*ga('send', 'pageview');*/
     </script>
     <!-- Google Tag Manager -->
     <script>
@@ -94,6 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+
     <div id="nav-bar" z-depth-1>
         <nav class="tt-nav-bar tt-new-light-green-bg row no-margin" role="navigation">
 
@@ -105,7 +107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img class="left logo1 tt-lo" width="47px" src="assets/images/new-logo-titi.png" style="margin-top:8px;margin-left:10px;" />
                     <h4 class="small-sub-brand tt-lo left brand-name" style="    line-height: 15px;
     padding-top: 5px;">
-                    <b>TITI</b><br><span style="font-size:12px;"> Cuidadores cuidadosos</span></h4>
+                        <b>TITI</b><br><span style="font-size:12px;"> Cuidadores cuidadosos</span></h4>
                 </a>
 
                 <ul class="right hide-on-med-and-down">
@@ -138,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-copyright">
 
             <div class="center">
-                <a href="#/terms-of-use">Termos de uso</a> | <a ng-click="Home.contactModal()"> Contato</a> <br><br>
+                <a href="#/terms-of-use"  analytics-on="click" analytics-event="Clique-Botao-Termos-de-Uso">Termos de uso</a> | <a ng-click="Home.contactModal()"> Contato</a> <br><br>
                 <div class="fb-like white" data-href="https://www.facebook.com/TITICuidadores/" data-width="300" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" style="padding:5px; border-radius: 5px;"></div>
 
                 <br> <br> Copyright © 2016 TITI - Todos os direitos reservados <br><br>
@@ -180,8 +182,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
                 <button class="btn waves-effect waves-light col s12
      valign tt-new-blue-bg" type="submit" ng-disabled="form.$invalid" name="action" style="margin-right:15px;">
-                Enviar
-            </button>
+                    Enviar
+                    </button>
 
             </div>
         </form>
@@ -217,34 +219,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         $(document).ready(function() {
             new WOW().init();
-
-            /*    var asyncLoop = function(o) {
-                    var i = -1,
-                        length = o.length;
-
-                    var loop = function() {
-                        i++;
-                        if (i == length) {
-                            o.callback();
-                            return;
-                        }
-                        o.functionToLoop(loop, i);
-                    }
-                    loop(); //init
-                }
-
-                asyncLoop({
-                    length: 1000,
-                    functionToLoop: function(loop, i) {
-                      setTimeout(function() {
-                          $('.carousel').carousel('next');
-                          loop();
-                      }, 2000);
-                    },
-                    callback: function() {
-                        //document.write('All done!');
-                    }
-                });*/
         });
     </script>
     <script src="assets/js/materialize.min.js"></script>
@@ -271,10 +245,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="./controllers/customer.js?v=9"></script>
     <script src="./controllers/search.js?v=9"></script>
     <script src="./services/auth.js?v=9"></script>
+    <script src="./services/base.js?v=9"></script>
     <script src="./services/helper.js?v=9"></script>
     <script src="./services/search.js?v=9"></script>
     <script src="assets/js/angular-datepicker.js"></script>
     <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    <script src="bower_components/angulartics/src/angulartics.js"></script>
+    <script src="bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGM0iDaLpM7L5yVBicQX75H8Xz0WKbBpw&signed_in=true&callback=initMap"></script>
 
 

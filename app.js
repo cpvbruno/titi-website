@@ -12,10 +12,16 @@ angular
         'datePicker',
         'naif.base64',
         'angular.viacep',
-				'facebook'
+				'facebook',
+        'angulartics',
+        'angulartics.google.analytics'
     ])
     .config(routesConfig)
     .config(['$httpProvider', resetHeaders])
+    .config(function ($analyticsProvider) {
+            $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+            $analyticsProvider.withAutoBase(true);  /* Records full path */
+    })
 		.config(function(FacebookProvider) {
 		// Set your appId through the setAppId method or
 		// use the shortcut in the initialize method directly.
