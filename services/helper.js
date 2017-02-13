@@ -205,6 +205,10 @@ function helperService(baseService) {
       id: '4',
       name: 'Fisioterapeuta Cuidador'
     },
+    {
+      id: '5',
+      name: 'Terapeuta Ocupacional'
+    },
 		{
 			id: '6',
 			name: 'Educador Físico'
@@ -213,11 +217,6 @@ function helperService(baseService) {
       id: '0',
       name: 'Todos'
     }
-		/*,
-    {
-      id: '5',
-      name: 'Fonoaudiólogo'
-    }*/
   ];
 
   helper.periodoOptions = [
