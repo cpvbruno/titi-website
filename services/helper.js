@@ -187,7 +187,7 @@ function helperService(baseService) {
     },
     {
       id: '2',
-      name: 'Enfermeiro Cuidador'
+      name: 'Enfermeiro'
     },
     {
       id: '3',
@@ -195,7 +195,7 @@ function helperService(baseService) {
     },
 		{
 			id: '7',
-			name: 'Assessor Familiar Cuidador'
+			name: 'Assessor Familiar'
 		},
 		{
 			id: '8',
@@ -203,7 +203,7 @@ function helperService(baseService) {
 		},
     {
       id: '4',
-      name: 'Fisioterapeuta Cuidador'
+      name: 'Fisioterapeuta'
     },
     {
       id: '5',
