@@ -668,6 +668,6 @@ body select {
 	font-size: 1.1em;
 	color: white;
   border-radius: 80px;
-    -webkit-transform: translateY(300%);
+    //-webkit-transform: translateY(300%);
 	//transform:translateY(300%);
 }
