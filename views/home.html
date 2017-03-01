@@ -11,50 +11,57 @@
             <br>
         </div>
         <div class="container">
-						<div class="row">
-							<div class="col m6 s12 main-search-box tt-pacientes-box z-depth-5 tt-search-home tt-new-green-bg p-all-ss ">
-	                <div class="col s12 center no-padding ">
-	                    <form name="Home.homeForm" data-ng-submit="Home.submitForm(Home.form)" class="card" style="padding-top: 13px;padding-bottom: 13px; margin:0px;">
-	                        <h4 class="header center teal-text ">Pacientes e Familiares</h4>
-	                        <p class="col s12 center teal-text">
-	                            Encontre cuidadores, enfermeiras e fisioterapeutas para cuidar de quem você ama.
-	                        </p>
-	                        <div class="col s12 center">
-	                            <input class="center white black-text" style="background-color: rgb(36, 130, 118) !important;
-	    color: white !important;
-	    border-radius: 4px;
-	    border: 0px;" data-ng-model="Home.form.cep" required type="text" name="cep" mask="99999-999" placeholder="Digite seu CEP aqui" />
-	                        </div>
+            <div class="row">
+                <div class="col m6 s12 main-search-box tt-pacientes-box z-depth-5 tt-search-home tt-new-green-bg p-all-ss ">
+                    <div class="col s12 center no-padding ">
+                        <form name="Home.homeForm" data-ng-submit="Home.submitForm(Home.form)" class="card" style="padding-top: 13px;padding-bottom: 13px; margin:0px;">
+                            <h4 class="header center teal-text ">Pacientes e Familiares</h4>
+                            <p class="col s12 center teal-text">
+                                Encontre cuidadores, enfermeiras e fisioterapeutas para cuidar de quem você ama.
+                            </p>
+                            <div class="col s12 center">
+                                <input class="center white black-text" style="background-color: rgb(36, 130, 118) !important;
+                                       color: white !important;
+                                       border-radius: 4px;
+                                       border: 0px;" data-ng-model="Home.form.cep" required type="text" name="cep" mask="99999-999" placeholder="Digite seu CEP aqui" />
+                            </div>
 
-	                        <div class="col s12 center">
-	                            <select data-ng-model="Home.form.selectedPartner" required data-ng-options="partner.name for partner in Home.partners" class="black-text">
-	                  <option value="">Escolha o profissional</option>
-	                </select>
-	                        </div>
+                            <div class="col s12 center">
+                                <select data-ng-model="Home.form.selectedPartner" required data-ng-options="partner.name for partner in Home.partners" class="black-text">
+                                    <option value="">Escolha o profissional</option>
+                                </select>
+                            </div>
 
-	                        <div class="col s12 center">
-	                            <button class="btn waves-effect waves-light col s12 valign tt-new-orange-bg"  analytics-on="click" analytics-event="Clique-Botao-Busca-Home"
-	                    type="submit" name="action" style="margin-top:15px;">
-	                   Pesquise aqui
-	                </button>
-	                        </div>
-	                        <div class="clearfix"></div>
-	                    </form>
-	                </div>
-	                <div class="col s12 no-padding">
-	                    <h6 class="center white-text tt-new-orange-bg p-all-s" style="margin-bottom:0px;">Estamos em operação na zona oeste de São Paulo capital, que tal fazer uma busca?</h6>
-	                </div>
-	                <div class="clearfix"></div>
-	            </div>
+                            <div class="col s12 center">
+                                <button class="btn waves-effect waves-light col s12 valign tt-new-orange-bg"  analytics-on="click" analytics-event="Clique-Botao-Busca-Home"
+                                        type="submit" name="action" style="margin-top:15px;">
+                                    Pesquise aqui
+                                </button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                    <div class="col s12 no-padding">
+                        <h6 class="center white-text tt-new-orange-bg p-all-s" style="margin-bottom:0px;">Que tal fazer uma busca?</h6>
+                    </div>
+                    <div class="clearfix"></div>
 
-							<div class="col m5 s12 offset-m1 evaluate-button">
-								<a href="#">
-									Quer avaliar um cuidador, enfermeiro ou fisioterapeuta?
-									<br>
-									Clique aqui
-								</a>
-							</div>
-						</div>
+                </div>   
+
+                <div class="col m4 s5 offset-m1 evaluate-button">
+                    <script> 
+                        url = baseService();
+                        alert(url.backendUrl + '/evaluate/evaluate.php')
+                    </script>
+                        
+                    <a href="" onclick="location.replace(url.backendUrl + '/evaluate/evaluate.php')">
+                        Quer avaliar um cuidador, <br> enfermeiro ou <br>fisioterapeuta?
+                        <br>
+                        Clique aqui
+                    </a>
+
+                </div>
+            </div>
         </div>
         <div class="row" id="titi" style="margin-top:40px;">
             <div class="white col s12">
@@ -100,8 +107,8 @@
 
                             <div class="col s12 center" style="margin-bottom:20px;">
                                 <h5 class="col s10 offset-s1 m4 offset-m4 center bubble-text   center m-auto wow pulse animated" data-wow-duration="2s" data-wow-iteration="infinite">
-          Como Funciona ??
-        </h5>
+                                    Como Funciona ??
+                                </h5>
                             </div>
 
                             <br>
@@ -126,8 +133,8 @@
                                 </p>
                             </div>
                             <div class="col s12">
-                              <br><br><br>
-                              <p class="center">Não estamos cobrando nossa taxa de administração nessa fase inicial. Os pagamentos são feitos diretamente para os profissionais.</p>
+                                <br><br><br>
+                                <p class="center">Não estamos cobrando nossa taxa de administração nessa fase inicial. Os pagamentos são feitos diretamente para os profissionais.</p>
                             </div>
 
 
