@@ -659,15 +659,20 @@ body select {
       width: 100%;
       margin-left: 0px;
     }
+
+		.evaluate-button {
+		  -webkit-transform: translateY(20%) !important;
+			transform:translateY(20%) !important;
+		}
 }
 
 .evaluate-button {
-    position: relative;
+  position: relative;
 	background-color: rgb(36, 130, 118);
 	text-align: center;
 	font-size: 1.1em;
 	color: white;
   border-radius: 80px;
-    //-webkit-transform: translateY(300%);
-	//transform:translateY(300%);
+  -webkit-transform: translateY(300%);
+	transform:translateY(300%);
 }
