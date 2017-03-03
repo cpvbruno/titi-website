@@ -7,7 +7,7 @@ angular
 function baseService() {
   var base = {};
 
-  base.backendUrl = 'http://titicuidadores.com.br/_prd';
+  base.backendUrl = 'http://titicuidadores.com.br/_homolog';
 
   return base;
 }
