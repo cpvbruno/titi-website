@@ -205,11 +205,11 @@ function helperService(baseService) {
       id: '4',
       name: 'Fisioterapeuta'
     },
-    {
-      id: '5',
-      name: 'Terapeuta Ocupacional'
-    },
-		{
+		    {
+		      id: '5',
+		      name: 'Terapeuta Ocupacional'
+		    },
+    		{
 			id: '6',
 			name: 'Educador Físico'
 		},
