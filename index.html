@@ -78,7 +78,6 @@
     <!-- <base href="/src" /> -->
 </head>
 
-
 <body data-ng-controller="HomeController as Home">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLN6J3"
@@ -96,113 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div id="nav-bar" z-depth-1>
-        <nav class="tt-nav-bar tt-new-light-green-bg row no-margin" role="navigation">
-
-            <div class="nav-wrapper container">
-
-                <a id="logo-container" href="#/" class="brand-logo">
-
-
-                    <img class="left logo1 tt-lo" width="100px" src="assets/images/new-logo-titi.png" style="margin-top:8px;margin-left:10px;" />
-                    <h4 class="small-sub-brand tt-lo brand-name" style="    line-height: 15px;
-    padding-top: 5px;">
-                       <span style="font-size:11px;"> Cuidadores cuidadosos</span></h4>
-                </a>
-
-                <ul class="right hide-on-med-and-down">
-                    <!--<li ng-controller="SearchHomeController as sc" class="white card search-box-home">
-                        <form data-ng-submit="sc.submitForm(sc.form)">
-                            <input id="searchIconBtn" placeholder="Digite seu CEP" class="col s8 tt-green-text" data-ng-model="sc.form.cep" />
-                            <button class="col s3 right orange-text btn-search-box-home" style="margin-top: -5px;"><i class="material-icons dp48">search</i></button>
-                        </form>
-                    </li>-->
-
-                    <li data-ng-repeat="link in Home.links" ng-show="Home.setLoggedMenu(link.type)"><a href="{{link.href}}">{{link.title}}</a></li>
-                    <li><a ng-click="Home.contactModal()">Contato</a></li>
-
-                </ul>
-
-
-                <ul id="nav-mobile" class="side-nav">
-                    <li data-ng-repeat="link in Home.links" ng-show="Home.setLoggedMenu(link.type)"><a href="{{link.href}}" onclick=" $('#sidenav-overlay').trigger('click');">{{link.title}}</a></li>
-                    <li><a ng-click="Home.contactModal()" onclick="$('#sidenav-overlay').trigger('click');">Contato</a></li>
-                </ul>
-
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-            </div>
-        </nav>
-    </div>
-
     <div data-ng-view></div>
-
-    <footer class="tt-footer-background">
-        <div class="footer-copyright">
-
-            <div class="center">
-                <a href="#/terms-of-use"  analytics-on="click" analytics-event="Clique-Botao-Termos-de-Uso">Termos de uso</a> | <a ng-click="Home.contactModal()"> Contato</a> <br><br>
-                <div class="fb-like white" data-href="https://www.facebook.com/TITICuidadores/" data-width="300" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" style="padding:5px; border-radius: 5px;"></div>
-
-                <br> <br> Copyright © 2016 TITI - Todos os direitos reservados <br><br>
-                <a href="http://colaborativa.net.br/" target="_blank"><img src="assets/images/logotipo-colaborativa.png" width="100px" /></a>
-                <div class="clearfix"></div>
-                <br>
-            </div>
-        </div>
-    </footer>
-    <!-- Modal Structure -->
-    <div id="modalContact" class="modal modal-fixed-footer">
-        <form name="Home.contactForm" data-ng-submit="Home.submitContactForm(Home.contactForm)" class="col s12">
-            <div class="modal-content">
-                <h4>Fale Conosco</h4>
-                <div class="row">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="name" data-ng-model="Home.contactForm.nome" type="text" class="validate" required="">
-                            <label for="name">Nome</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" data-ng-model="Home.contactForm.email" type="email" class="validate">
-                            <label for="email" data-error="Email incorreto" data-success="Email Válido">Email</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="message" data-ng-model="Home.contactForm.mensagem" class="validate materialize-textarea" rows="5" required></textarea>
-                            <label for="message">Mensagem</label>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-                <button class="btn waves-effect waves-light col s12
-     valign tt-new-blue-bg" type="submit" ng-disabled="form.$invalid" name="action" style="margin-right:15px;">
-                    Enviar
-                    </button>
-
-            </div>
-        </form>
-    </div>
-
-
-    <!-- Modal Structure -->
-    <div id="modalMore" class="modal modal-fixed-footer ">
-        <div class="modal-content">
-            <p>Nós não somos uma Cooperativa ou um Home Care, somos uma plataforma que funciona como uma vitrine para os profissionais, que tem suas experiências avaliadas por nós e são entrevistados antes de ficarem disponíveis.
-            </p>
-            <p> A startup nasceu quando dois amigos e sócios resolveram empreender novamente porque a filha de um deles precisa de cuidados especiais. Desde então aplicaram sua experiência de mais de 20 anos em negócios de TI com a vivência da pequena TITI
-                que está com 5 anos de vida, e trouxe luz para a vida de todos ao redor dela, que agora também inspira empreendedores a usarem a tecnologia para melhorar esse mercado.
-            </p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-        </div>
-    </div>
 
 
     <!--  Scripts-->
