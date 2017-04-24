@@ -166,10 +166,10 @@ function helperService(baseService) {
       id: 'CREFITO',
       name: 'CREFITO'
     },
-    /*{
-      id: 'CRM',
-      name: 'CRM'
-    },*/
+    {
+      id: 'CRP',
+      name: 'CRP'
+    },
     {
       id: 'OUTRO',
       name: 'CUIDADOR'
@@ -212,6 +212,10 @@ function helperService(baseService) {
     		{
 			id: '6',
 			name: 'Educador Físico'
+		},
+    		{
+			id: '9',
+			name: 'Psicólogo'
 		},
 		{
       id: '0',
