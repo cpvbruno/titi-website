@@ -402,6 +402,10 @@ textarea {
     background-color: #f3ba3c;
 }
 
+.tt-new-red-bg {
+    background-color: #de4d68;
+}
+
 .tt-new-brown-bg {
     background-color: #938953;
 }
@@ -411,11 +415,11 @@ textarea {
 }
 
 .btn, .btn-large {
-    background-color: #f3ba3c;
+    background-color: #b9b9b9;
 }
 
 .btn:hover, .btn-large:hover {
-    background-color: #938953;
+    background-color: #666 ;
 }
 
 .teal {
@@ -460,7 +464,7 @@ body, body * {
 }
 
 body {
-    background-image: url('../images/bg-health.jpg');
+    background-color:#008efd
 }
 
 .tt-image-green {
@@ -668,7 +672,7 @@ body select {
 
 .evaluate-button {
   position: relative;
-	background-color: rgb(36, 130, 118);
+	background-color: red;
 	text-align: center;
 	font-size: 1.1em;
 	color: white;
