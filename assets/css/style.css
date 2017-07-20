@@ -279,8 +279,8 @@ textarea {
         min-height: 500px;
         background-color: #1C2743;
         background-image: url(../images/final-bg.jpg);
-        background-size: 170% auto;
-        background-position: left -390px;
+        background-size: 100% auto;
+        background-position: left 0px;
     }
     .tt-round-border {
         border-radius: 0 70px 0 0;
